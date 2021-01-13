@@ -75,6 +75,9 @@ html, body {
   .logo {
     display: block;
     max-width: 100%;
+    height: 100px;
+    margin-left: 40px;
+    margin-top: 5px;
     margin-bottom: $logo-margin;
   }
 
@@ -159,8 +162,8 @@ html, body {
 
   // this is parent links of the currently selected ToC entry
   .toc-link.active-parent {
-    background-color: $nav-active-parent-bg;
-    color: $nav-active-parent-text;
+    background-color: #F3F7F9;
+    //color: #F3F7F9;
   }
 
   .toc-list-h2 {
@@ -182,6 +185,7 @@ html, body {
     li,a {
       color: $nav-text;
       text-decoration: none;
+      font-size: 13px;
     }
 
     a:hover {
@@ -263,7 +267,7 @@ html, body {
   // half of the content always this background color.
   .dark-box {
     width: $examples-width;
-    background-color: $examples-bg;
+    background-color: #F3F7F9;
     position: absolute;
     right: 0;
     top: 0;
@@ -273,13 +277,14 @@ html, body {
   .lang-selector {
     position: fixed;
     z-index: 50;
-    border-bottom: 5px solid $lang-select-active-bg;
+    //border-bottom: 5px solid $lang-select-active-bg;
   }
 }
 
 .lang-selector {
+  padding-top: 0.5em;
   display: flex;
-  background-color: $lang-select-bg;
+  background-color:#377dcd;
   width: 100%;
   font-weight: bold;
   overflow-x: auto;
@@ -292,12 +297,12 @@ html, body {
     outline: 0;
 
     &:active, &:focus {
-      background-color: $lang-select-pressed-bg;
+      background-color: #9bbbcb;
       color: $lang-select-pressed-text;
     }
 
     &.active {
-      background-color: $lang-select-active-bg;
+      background-color: #f3f7f9;
       color: $lang-select-active-text;
     }
   }
@@ -346,6 +351,8 @@ html, body {
   }
 
   h1 {
+    color: #ffffff;
+
     @extend %header-font;
     font-size: 25px;
     padding-top: 0.5em;
@@ -354,7 +361,7 @@ html, body {
     margin-top: 2em;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
-    background-color: #fdfdfd;
+    background-color: #377dcd;
   }
 
   h1:first-child, div:first-child + h1 {

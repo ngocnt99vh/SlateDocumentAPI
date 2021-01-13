@@ -1,0 +1,68 @@
+# VnptBiometricsApiApi
+
+All URIs are relative to *https://localhost:44305/v1*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**publicCreateOrRefreshConnectToken**](_VnptBiometricsApiApi.md#publicCreateOrRefreshConnectToken) | **POST** /connect/token | Lấy token
+
+
+<a name="publicCreateOrRefreshConnectToken"></a>
+# **publicCreateOrRefreshConnectToken**
+> Token publicCreateOrRefreshConnectToken(clientId, grantType, scope, clientSecret)
+
+Lấy token
+
+### Example
+```java
+// Import classes:
+//import io.swagger.client.ApiClient;
+//import io.swagger.client.ApiException;
+//import io.swagger.client.Configuration;
+//import io.swagger.client.auth.*;
+//import io.swagger.client.api.VnptBiometricsApiApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: key
+ApiKeyAuth key = (ApiKeyAuth) defaultClient.getAuthentication("key");
+key.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//key.setApiKeyPrefix("Token");
+
+VnptBiometricsApiApi apiInstance = new VnptBiometricsApiApi();
+String clientId = "clientId_example"; // String | Client_Id
+String grantType = "grantType_example"; // String |  Grant_Type
+String scope = "scope_example"; // String |  Grant_Type
+String clientSecret = "clientSecret_example"; // String | Client_Secret
+try {
+    Token result = apiInstance.publicCreateOrRefreshConnectToken(clientId, grantType, scope, clientSecret);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling VnptBiometricsApiApi#publicCreateOrRefreshConnectToken");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **clientId** | **String**| Client_Id |
+ **grantType** | **String**|  Grant_Type |
+ **scope** | **String**|  Grant_Type |
+ **clientSecret** | **String**| Client_Secret |
+
+### Return type
+
+[**Token**](#token)
+
+### Authorization
+
+[key](../README.md#key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: application/json
+
